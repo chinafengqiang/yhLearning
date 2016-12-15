@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "yh.com.yhlearning"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "EWnQffAgXp6efqJhmwVJh4",
+                GETUI_APP_KEY   : "8bWI4ZwrOl91UGD8mCdA5",
+                GETUI_APP_SECRET: "ZNtQ6TTvNo99pSZtt2A5B",
+                PACKAGE_NAME    : applicationId
+        ]
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.getui:sdk:+'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'
+}

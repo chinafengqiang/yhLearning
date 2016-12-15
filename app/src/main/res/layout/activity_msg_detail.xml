@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.yh.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:id="@+id/msg_detail_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:background="@color/white"
+        android:layout_margin="@dimen/padding_10_normal"
+        >
+        <TextView
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/padding_10_normal"
+            android:layout_marginRight="@dimen/padding_10_normal"
+            android:layout_marginTop="@dimen/padding_10_normal"
+            android:textAppearance="@style/TextStyle_16_3"
+            android:text="2016-11-20 12:20:00"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_10_normal"
+            android:layout_below="@id/msg_time"
+            >
+            <TextView
+                android:id="@+id/msg_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/padding_10_normal"
+                android:textAppearance="@style/TextStyle_18_7"
+                android:text="@string/msg_detail"
+
+                />
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

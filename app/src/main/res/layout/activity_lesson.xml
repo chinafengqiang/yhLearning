@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.yh.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_5_normal"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:background="@mipmap/tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:background="@mipmap/menu_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ListView
+                    android:id="@+id/list0"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip" />
+                <!--  android:background="#90FF00"  -->
+                <ListView
+                    android:id="@+id/list1"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip"  />
+                <!--  android:background="#FFFF00"  -->
+                <ListView
+                    android:id="@+id/list2"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip" />
+                <!--  android:background="#90FF0D"  -->
+                <ListView
+                    android:id="@+id/list3"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip"  />
+                <!--  android:background="#00FF0D"  -->
+                <ListView
+                    android:id="@+id/list4"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip"  />
+                <!--  android:background="#90FF0D"  -->
+                <ListView
+                    android:id="@+id/list5"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip" />
+                <!--  android:background="#FFFF00"  -->
+                <ListView
+                    android:id="@+id/list6"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="#0099ff"
+                    android:dividerHeight="0.5dip" />
+                <!--  android:background="#90FF0D"  -->
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>
+
+
+
+
+

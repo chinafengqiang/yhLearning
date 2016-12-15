@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yh.learning"
+    android:versionCode="1"
+    android:versionName="1.0.0"
+    >
+
+    <uses-sdk android:minSdkVersion="11" />
+    <!-- 访问网络的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--<permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />-->
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 是否有网络的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- iBeancon功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_yh"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.yh.learning.SplashActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="learning"
+                    android:scheme="yhloader" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.WhatActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.MsgDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.MsgActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.UserInfoActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.EditUserPassActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.MySettingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+
+        <activity
+            android:name="com.yh.learning.LessonActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+       </activity>
+
+        <activity
+            android:name="com.yh.learning.PreLessonActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.main" >
+        </activity>
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复-->
+        <service android:name="com.yh.push.IntentService"/>
+
+        <!-- 配置第三方Receiver -->
+        <!--<receiver
+            android:name="com.yh.push.PushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
+            </intent-filter>
+        </receiver>-->
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.yh.push.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice">
+        </service>
+
+    </application>
+
+</manifest>
