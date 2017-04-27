@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 
 public class SpUtil {
+	/*
+
+	 */
 	private static final String NAME="XYWK_IPHONE_SP";
 	private static SpUtil instance;
 	static{
